@@ -86,7 +86,7 @@ skills.addEventListener("refresh", () => {
 const skilllist = document.querySelector(".skillContainer");
 skilllist.addEventListener("mouseover", (event) => {
   const target = event.target;
-  if (target.className.includes("skillName")) {
+  if (target.className.includes("skillName") || target.tagname === "span") {
     const tooltip = target.children[0];
     tooltip.classList.add("tooltip-hover");
     target.addEventListener("mouseleave", (event) => {
