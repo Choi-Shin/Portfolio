@@ -1,0 +1,357 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  /* overflow-x: hidden; */
+  width: 100vw;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+  font-family: "Pretendard-Regular";
+  /* font-family: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; */
+  padding: 0;
+  margin: 0;
+}
+.nav {
+  margin: 0;
+  top: 0;
+  width: 100%;
+  position: sticky;
+  background-color: rgb(255, 255, 255);
+  z-index: 100;
+  box-shadow: 0px 1px 5px rgb(168, 168, 168);
+}
+
+.navList {
+  padding: 0;
+  height: 8vh;
+  align-items: center;
+  display: grid;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.navLi {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.navLi:hover,
+.selected {
+  color: rgb(0, 0, 0);
+  border-bottom: solid;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+  cursor: pointer;
+}
+.navLi:hover > a,
+.selected {
+  color: rgb(0, 0, 0);
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.logos {
+  display: flex;
+}
+img {
+  width: 5rem;
+}
+
+.logo {
+  transition-delay: calc(100ms * var(--order));
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .hidden {
+    transition: opacity 1s;
+  }
+} */
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.watchAgain {
+  margin: 0 auto;
+  padding: 0.5rem;
+  width: 6rem;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+
+.watchAgain:hover {
+  background-color: rgba(166, 165, 165, 0.3);
+}
+.announcement {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  word-break: break-all;
+}
+
+.announcement::after {
+  content: " ";
+  margin-left: 0.4rem;
+  border-right: 2px solid rgb(255, 255, 255);
+  animation: cursor 1s infinite steps(2);
+}
+
+@keyframes cursor {
+  from {
+    border-right: 2px solid rgb(126, 126, 126);
+  }
+  to {
+    border-right: 2px solid rgb(255, 255, 255);
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  text-align: center;
+  list-style: none;
+}
+
+.pageContainer {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+}
+
+.skillContainer {
+  /* display: grid; */
+  margin: 0;
+  /* border: 1px black solid; */
+  border-radius: 1.3rem;
+  text-align: center;
+  background-color: transparent;
+  width: 70vw;
+  max-width: 50rem;
+  height: 80vh;
+  margin-top: 1rem;
+  padding: 2rem;
+  overflow: hidden;
+  /* align-content: space-around; */
+  text-overflow: ellipsis;
+}
+
+.anim {
+  animation: skillcon 2s ease-in-out;
+}
+
+@keyframes skillcon {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+    font-size: x-small;
+  }
+  70% {
+    font-size: x-large;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    font-size: medium;
+    /* transform: translateY(4%); */
+  }
+}
+.skillHeader {
+  display: flex;
+  margin: 0;
+  /* padding-left: 1rem; */
+  padding-right: 1rem;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+.stackTitle {
+  margin: 0;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.skillTable {
+  margin-bottom: 0.5rem;
+  justify-items: end;
+  display: grid;
+  min-height: 5.5rem;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  justify-items: center;
+}
+.skillList {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  vertical-align: middle;
+  list-style: none;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+.skillCon {
+  display: flex;
+  align-items: center;
+}
+.skillName {
+  font-size: small;
+  vertical-align: middle;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.1rem;
+  width: 6.5rem;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.skillName > img {
+  float: left;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.3rem;
+  background-color: white;
+}
+
+.spanDiv {
+  margin-left: 0.3rem;
+  display: inline;
+  vertical-align: middle;
+}
+#skillChange {
+  width: 3rem;
+  height: 2rem;
+  float: right;
+  color: black;
+  border-radius: 0.3rem;
+  background-color: rgba(226, 226, 226, 0.3);
+  border: 1px solid black;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+  /* margin-top: 1rem; */
+}
+
+.progressBar {
+  background-color: rgb(122, 122, 122);
+  width: 18vw;
+  height: 7px;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  border-radius: 1rem;
+  /* padding: 6px; */
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress {
+  height: 7px;
+  border-radius: 30px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  /* transition: 0.4s linear; */
+  transition-property: width, background-color;
+}
+
+.progress-moved .progress {
+  background-color: rgb(0, 0, 0);
+  animation: progressAnimation 2s;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+    background-color: rgb(57, 57, 57);
+    opacity: 0;
+    height: 7px;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    width: width;
+    opacity: 1;
+    background-color: rgba(0, 0, 0);
+  }
+}
+
+.left {
+  width: 50%;
+  float: left;
+}
+
+.right {
+  width: 50%;
+  float: right;
+}
