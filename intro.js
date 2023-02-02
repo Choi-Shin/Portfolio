@@ -38,7 +38,6 @@ export const typing = async () => {
   const accent = ["강", "력", "한"];
   // audio.play();
   while (letter.length) {
-    console.log(audio);
     audio.muted = false;
     audio.play();
     let l = letter.shift();

@@ -33,6 +33,10 @@ export async function skillAdd() {
       const spanDiv = document.createElement("div");
       spanDiv.className = "spanDiv";
       spanDiv.appendChild(skill);
+      const detail = document.createElement("div");
+      detail.innerText = data.detail;
+      detail.className = "tooltip";
+      div.appendChild(detail);
       const bar = document.createElement("div");
       const progress = document.createElement("div");
       progress.style.width = data.progress + "%";
@@ -79,8 +83,38 @@ skills.addEventListener("refresh", () => {
   console.log("새로고침");
 });
 
+const skilllist = document.querySelector(".skillContainer");
+skilllist.addEventListener("mouseover", (event) => {
+  const target = event.target;
+  console.log(target.className);
+  if (target.className.includes("skillName")) {
+    console.log(target.className);
+    const tooltip = target.children[0];
+    tooltip.classList.add("tooltip-hover");
+    target.addEventListener("mouseleave", (event) => {
+      console.log(event.target);
+      const tooltip = target.children[0];
+      tooltip.classList.remove("tooltip-hover");
+    });
+    target.classList.add("cursor");
+  }
+});
+skilllist.addEventListener("mouseleave", (event) => {
+  const target = event.target;
+  if (target.className === "skillName") {
+    target.classList.remove("cursor");
+  }
+});
+
+// const tooltip = document.querySelector(".tooltip");
+// tooltip.addEventListener("mouseleave", (event) => {
+//   event.target.classList.remove("tooltip-hover");
+// });
+// tooltip.addEventListener("mouseleave", (event) => {
+//   event.target.classList.remove("tooltip-hover");
+// });
+
 skills.addEventListener("font", () => {
-  const pageCon = document.querySelector(".pageContainer");
   const skillCon = document.querySelector(".skillContainer");
   skillCon.classList.add("anim");
   setTimeout(() => {
