@@ -86,15 +86,14 @@ skills.addEventListener("refresh", () => {
 const skilllist = document.querySelector(".skillContainer");
 skilllist.addEventListener("mouseover", (event) => {
   const target = event.target;
-  console.log(target.className);
   if (target.className.includes("skillName")) {
-    console.log(target.className);
     const tooltip = target.children[0];
     tooltip.classList.add("tooltip-hover");
     target.addEventListener("mouseleave", (event) => {
-      console.log(event.target);
-      const tooltip = target.children[0];
-      tooltip.classList.remove("tooltip-hover");
+      if (event.target.className.includes("skillName")) {
+        const tooltip = target.children[0];
+        tooltip.classList.remove("tooltip-hover");
+      }
     });
     target.classList.add("cursor");
   }
