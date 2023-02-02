@@ -86,17 +86,35 @@ skills.addEventListener("refresh", () => {
 const skilllist = document.querySelector(".skillContainer");
 skilllist.addEventListener("mouseover", (event) => {
   const target = event.target;
-  if (target.className.includes("skillName") || target.tagname === "span") {
-    const tooltip = target.children[0];
-    tooltip.classList.add("tooltip-hover");
-    target.addEventListener("mouseleave", (event) => {
-      if (event.target.className.includes("skillName")) {
-        const tooltip = target.children[0];
-        tooltip.classList.remove("tooltip-hover");
-      }
-    });
-    target.classList.add("cursor");
+  // console.log(target.tagName);
+  let type;
+  type = target.className.includes("skillName")
+    ? 1
+    : target.tagName === "SPAN"
+    ? 2
+    : null;
+  type ? console.log(type) : null;
+  if (type) {
+    if (type === 1) {
+      const tooltip = target.children[0];
+      tooltip.classList.add("tooltip-hover");
+    } else {
+      const tooltip =
+        target.parentNode.previousElementSibling.previousElementSibling;
+      tooltip.classList.add("tooltip-hover");
+    }
   }
+  target.classList.add("cursor");
+  target.addEventListener("mouseleave", (event) => {
+    if (type === 1) {
+      const tooltip = target.children[0];
+      tooltip.classList.remove("tooltip-hover");
+    } else if (type === 2) {
+      const tooltip =
+        target.parentNode.previousElementSibling.previousElementSibling;
+      tooltip.classList.remove("tooltip-hover");
+    }
+  });
 });
 skilllist.addEventListener("mouseleave", (event) => {
   const target = event.target;
