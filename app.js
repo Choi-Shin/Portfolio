@@ -1,12 +1,14 @@
-import observeUrlChange, { setHeight } from "./function.js";
+import { setHeight } from "./function.js";
 import { Observer } from "./observer.js";
 import { typing } from "./intro.js";
 import { skillAdd } from "./Skills.js";
+import { profile } from "./profile.js";
 setHeight();
 
 let observer = new Observer("hidden", "show");
 observer.observe();
 skillAdd();
+profile();
 setTimeout(typing, 500);
 let page = 0;
 let lastPage = $("section").length;

@@ -101,9 +101,6 @@ section {
 .logos {
   display: flex;
 }
-img {
-  width: 5rem;
-}
 
 .logo {
   transition-delay: calc(100ms * var(--order));
@@ -194,8 +191,60 @@ li {
   text-overflow: ellipsis;
 }
 
+@media screen and (max-width: 768px) {
+  .profileImg {
+    width: 20rem;
+  }
+}
+
+#profile {
+  align-content: space-between;
+  font-weight: bold;
+}
+.profileHead {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 30vw 1fr;
+  border: 2px solid black;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 2rem;
+}
 .anim {
   animation: skillcon 2s ease-in-out;
+}
+.introWrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  height: 100%;
+}
+.info {
+  border-bottom: 1px dotted black;
+  /* margin: 0 auto; */
+  text-align: left;
+}
+.introWrapper > div {
+  padding-bottom: 2rem;
+}
+.profileWrapper {
+  display: grid;
+  margin-top: 2rem;
+  grid-template-rows: 1fr 30vh;
+  align-items: center;
+  align-items: start;
+}
+.introduce {
+  margin: 0 auto;
+}
+
+.timelineList {
+  width: 30rem;
+  margin: 0 auto;
+}
+.timelineList > li {
+  text-align: left;
+  margin: 1rem;
 }
 
 @keyframes skillcon {
