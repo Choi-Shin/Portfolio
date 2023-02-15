@@ -1,5 +1,5 @@
-import { setHeight } from "/function.js";
-import { Observer } from "/observer.js";
+import { setHeight } from "../main/function.js";
+import { Observer } from "../main/observer.js";
 import { typing } from "/intro.js";
 import { skillAdd } from "/Skills.js";
 import { profile } from "/profile.js";
