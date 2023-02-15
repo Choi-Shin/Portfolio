@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "Skills.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js"
@@ -23,10 +23,6 @@
     "cheerio": "^1.0.0-rc.12",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
-    "@babel/cli": "^7.19.3",
-    "@babel/core": "^7.20.2",
-    "@babel/node": "^7.20.2",
-    "@babel/preset-env": "^7.20.2",
     "nodemon": "^2.0.20"
   },
   "devDependencies": {
