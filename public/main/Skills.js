@@ -2,7 +2,7 @@
 const states = { main: "Main", sub: "Sub" };
 let state = states.main;
 
-const response = await fetch("../data/skill.json")
+const response = await fetch("./main/data/skill.json")
   .then((r) => {
     return r.json();
   })
