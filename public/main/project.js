@@ -1,4 +1,4 @@
-const response = await fetch("../data/project.json")
+const response = await fetch("./main/data/project.json")
   .then((r) => {
     return r.json();
   })
