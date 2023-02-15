@@ -44,6 +44,7 @@ export function project() {
     const homeImg = document.createElement("img");
     homeImg.src = "/assets/img/projects/home.png";
     site.appendChild(homeImg);
+    site.addEventListener("click", () => window.open(`${projectArr[i].link}`));
     footer.appendChild(gitHub);
     footer.appendChild(site);
     const tooltip = document.createElement("div");

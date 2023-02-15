@@ -192,16 +192,16 @@ li {
   text-overflow: ellipsis;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 700px) {
   .profileImg {
     width: 25rem;
   }
   #profile {
     max-height: 92vh;
-    font-size: small;
+    font-size: medium;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   .profileImg {
     width: 15rem;
   }
@@ -483,7 +483,7 @@ h2 {
   border-radius: 1rem;
   box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 3rem;
-  margin-top: 1rem;
+  margin-top: 0.2rem;
 }
 .item {
   width: 300px;
@@ -494,7 +494,7 @@ h2 {
   /* border: 1px solid black; */
   border-radius: 1rem;
   display: grid;
-  grid-template-rows: 3vh 1fr 10vh;
+  grid-template-rows: 5vh 1fr 10vh;
   align-items: center;
   justify-items: center;
   width: 300px;
@@ -505,13 +505,14 @@ h2 {
   width: 100%;
   height: auto;
   overflow: auto;
+  background-color: black;
 }
 .imageCon img {
   max-width: 100%;
-  max-height: 350px;
+  max-height: 330px;
   height: auto;
   margin: 0 auto;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
 }
 
 .projectFooter {
@@ -541,7 +542,7 @@ h2 {
 
 #projects {
   display: grid;
-  grid-template-rows: 10% 1fr;
+  grid-template-rows: 4vh 1fr;
   justify-content: center;
   align-items: start;
   align-items: start;
@@ -551,7 +552,7 @@ h2 {
 }
 
 .owl-carousel {
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 
 .projectTooltip {
