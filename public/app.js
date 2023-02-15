@@ -1,9 +1,9 @@
-import { setHeight } from "/main/function.js";
-import { Observer } from "/main/observer.js";
-import { typing } from "/main/intro.js";
-import { skillAdd } from "/Skills.js";
-import { profile } from "/profile.js";
-import { project } from "/project.js";
+import { setHeight } from "function.js";
+import { Observer } from "observer.js";
+import { typing } from "intro.js";
+import { skillAdd } from "Skills.js";
+import { profile } from "profile.js";
+import { project } from "project.js";
 setHeight();
 
 let observer = new Observer("hidden", "show");
