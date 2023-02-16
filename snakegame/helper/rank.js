@@ -1,5 +1,5 @@
 export async function postRanking(data) {
-  const response = await fetch("http://localhost:3000/snakegame/rank", {
+  const response = await fetch("/snakegame/rank", {
     method: "POST",
     mode: "cors",
     cache: "no-cache",
@@ -19,10 +19,11 @@ export async function postRanking(data) {
 }
 
 export async function getRanking() {
-  const response = await fetch("http://localhost:3000/snakegame/rank", {
+  const response = await fetch("/snakegame/rank", {
     method: "GET",
   })
     .then((data) => {
+      console.log("GET 요청 받음");
       return data.json();
     })
     .catch((err) => {

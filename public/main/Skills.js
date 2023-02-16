@@ -95,10 +95,20 @@ skilllist.addEventListener("mouseover", (event) => {
   if (type) {
     if (type === 1) {
       const tooltip = target.children[0];
+      if (target.innerText.includes("tomcat")) {
+        tooltip.classList.add("tomcat");
+      } else if (target.innerText.includes("Unix")) {
+        tooltip.classList.add("unix");
+      }
       tooltip.classList.add("tooltip-hover");
     } else {
       const tooltip =
         target.parentNode.previousElementSibling.previousElementSibling;
+      if (target.innerText.includes("Tomcat")) {
+        tooltip.classList.add("tomcat");
+      } else if (target.innerText.includes("Unix")) {
+        tooltip.classList.add("unix");
+      }
       tooltip.classList.add("tooltip-hover");
     }
   }

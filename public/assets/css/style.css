@@ -125,8 +125,9 @@ canvas {
   width: 6rem;
   border-radius: 0.4rem;
   background-color: transparent;
-  border: 1px solid rgb(0, 0, 0);
+  border: none;
   color: rgb(0, 0, 0);
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .watchAgain:hover {
@@ -220,7 +221,7 @@ li {
   align-items: center;
   display: grid;
   grid-template-columns: 30vw 1fr;
-  border: 2px solid black;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
   margin-top: 1rem;
   border-radius: 1rem;
   padding: 2rem;
@@ -359,6 +360,16 @@ li {
   color: white;
   background: rgb(55, 55, 55);
 }
+.unix {
+  display: none;
+  position: absolute;
+  bottom: 13vh;
+}
+.tomcat {
+  display: none;
+  position: absolute;
+  bottom: 10vh;
+}
 
 .tooltip-hover {
   display: block;
@@ -458,27 +469,69 @@ h2 {
   float: right;
 }
 
-/* .cursor {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👀</text></svg>")
+.cursor {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💡</text></svg>")
       16 0,
-    auto; 
-} */
+    auto; /*!emojicursor.app*/
+}
 
 #projects > h2 {
   text-align: center;
 }
+
+.owl-item {
+  border-radius: 1rem;
+  box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 3rem;
+  margin-top: 0.2rem;
+}
 .item {
   height: 50vh;
   width: 40vh;
-  border: 1px solid black;
 }
-.owl-carousel .owl-stage {
+.carouselCon {
+  /* border: 1px solid black; */
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 5vh 1fr 10vh;
+  align-items: center;
+  justify-items: center;
+  width: 300px;
+  height: 450px;
+}
+.imageCon {
+  height: 100%;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  background-color: black;
+}
+.imageCon img {
+  max-width: 100%;
+  max-height: 330px;
+  height: auto;
+  margin: 0 auto;
+  /* border-radius: 1rem; */
+}
+
+.projectFooter {
   display: flex;
 }
 
-.owl-carousel .owl-item img {
-  width: auto;
-  height: 100%;
+.projectFooter button {
+  background-color: inherit;
+  border: none;
+}
+
+.projectFooter img {
+  width: 3rem;
+}
+
+/* .owl-carousel .owl-item img {
+  height: fit-content;
+} */
+.owl-carousel .owl-stage {
+  display: flex;
 }
 
 .highlight {
@@ -488,7 +541,7 @@ h2 {
 
 #projects {
   display: grid;
-  grid-template-rows: 10% 1fr;
+  grid-template-rows: 4vh 1fr;
   justify-content: center;
   align-items: start;
   align-items: start;
@@ -498,11 +551,7 @@ h2 {
 }
 
 .owl-carousel {
-  margin-top: 4rem;
-}
-.carouselCon {
-  display: grid;
-  grid-template-rows: 10vh 1fr;
+  margin-top: 5rem;
 }
 
 .projectTooltip {

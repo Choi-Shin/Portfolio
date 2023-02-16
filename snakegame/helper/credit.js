@@ -1,5 +1,5 @@
 export async function getCredit() {
-  const response = await fetch("http://localhost:3000/snakegame/credit", {
+  const response = await fetch("/snakegame/credit", {
     method: "GET",
   })
     .then((data) => {

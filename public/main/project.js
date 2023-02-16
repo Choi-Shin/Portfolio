@@ -23,7 +23,6 @@ export function project() {
     image.className = "projectImage";
     image.style.width = wrapper.style.width;
     image.src = img;
-    image.style.objectFit = "scale-down";
     imageContainer.appendChild(image);
     const skill = document.createElement("ul");
     const skills = projectArr[i].skills;
@@ -32,15 +31,32 @@ export function project() {
       li.innerHTML = skills[i];
       skill.appendChild(li);
     }
+    const footer = document.createElement("div");
+    footer.className = "projectFooter";
+    const gitHub = document.createElement("button");
+    const gitImg = document.createElement("img");
+    gitImg.src = "/assets/img/projects/github.png";
+    gitHub.appendChild(gitImg);
+    gitHub.addEventListener("click", () =>
+      window.open(`${projectArr[i].github}`)
+    );
+    const site = document.createElement("button");
+    const homeImg = document.createElement("img");
+    homeImg.src = "/assets/img/projects/home.png";
+    site.appendChild(homeImg);
+    site.addEventListener("click", () => window.open(`${projectArr[i].link}`));
+    footer.appendChild(gitHub);
+    footer.appendChild(site);
     const tooltip = document.createElement("div");
     tooltip.className = "projectTooltip";
     const detail = document.createElement("div");
     detail.innerHTML = projectArr[i].description;
+    //imageContainer.appendChild(tooltip);
     tooltip.appendChild(skill);
     tooltip.appendChild(detail);
     wrapper.appendChild(name);
     wrapper.appendChild(imageContainer);
-    wrapper.appendChild(tooltip);
+    wrapper.appendChild(footer);
     carousel.appendChild(wrapper);
   }
   $(".owl-carousel").owlCarousel({
@@ -69,6 +85,7 @@ export function project() {
     //   },
     // },
   });
+  $(".owl-carousel").trigger("refresh.owl.carousel");
 }
 
 const carousel = document.querySelector(".owl-carousel");

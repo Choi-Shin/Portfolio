@@ -8,6 +8,7 @@ import {
   timeFormatting,
 } from "./functions/functions.js";
 import { getRanking, postRanking } from "../helper/rank.js";
+let json = JSON.parse(await getRanking());
 let canvas = document.getElementById("canvas");
 let canvasContext = canvas.getContext("2d");
 let img = new Image();
@@ -15,7 +16,7 @@ img.src = "../img/apple.png";
 let name;
 let paused = false;
 let SPEED = 3;
-let json = JSON.parse(await getRanking());
+
 let gameState = true;
 let snake;
 let apple;
@@ -41,8 +42,8 @@ export function gameLoop(state) {
 }
 let timeId;
 async function loop() {
-  let rankingData = sortByScore(json["ranking"]);
   if (gameState == false) {
+    let rankingData = sortByScore(json["ranking"]);
     eat.currentTime = 0;
     levelUp.currentTime = 0;
     playClip(gameover);
@@ -61,7 +62,7 @@ async function loop() {
         name: name,
         date: `${day} ${time}`,
       });
-      if (count != 1 && rankingData.length > 10) {
+      while (rankingData.length > 10) {
         rankingData.pop();
       }
       let data = { ranking: rankingData };

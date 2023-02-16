@@ -1,10 +1,7 @@
 const fs = require("fs");
-const path = require("path");
 const express = require("express");
 const router = express.Router();
 const credit = require("../snakegame/data/credit.json");
-const rank = require("../snakegame/data/ranking.json");
-
 router.get("/credit", async (req, res) => {
   try {
     res.json(JSON.stringify(credit));
@@ -14,6 +11,7 @@ router.get("/credit", async (req, res) => {
 });
 router.get("/rank", async (req, res) => {
   try {
+    let rank = require("../snakegame/data/ranking.json");
     res.setHeader("Content-Type", "application/json");
     res.json(JSON.stringify(rank));
   } catch (err) {
