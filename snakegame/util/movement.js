@@ -24,6 +24,11 @@ let level = 1;
 var eat = new Audio("/sound/eating.wav");
 var levelUp = new Audio("/sound/levelup.wav");
 var gameover = new Audio("/sound/gameover2.wav");
+
+let timeout;
+
+const fps = 10;
+
 export function gameLoop(state) {
   while (!name) {
     name = prompt("닉네임을 입력해주세요!");
@@ -40,9 +45,9 @@ export function gameLoop(state) {
     loop();
   }
 }
-let timeId;
 async function loop() {
   if (gameState == false) {
+    clearTimeout(timeout);
     let rankingData = sortByScore(json["ranking"]);
     eat.currentTime = 0;
     levelUp.currentTime = 0;
@@ -76,13 +81,15 @@ async function loop() {
       let data = { ranking: rankingData };
       await postRanking(data);
     }
-    clearTimeout(timeId);
+
     gameOver(snake.tail.length - 1);
     return;
   }
   try {
     show();
-    timeId = setTimeout(loop, 600 / (level * SPEED));
+    timeout = setTimeout(() => {
+      requestAnimationFrame(loop);
+    }, 1000 / (fps * level));
   } catch (error) {
     console.log(error);
   }
