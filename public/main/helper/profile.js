@@ -1,5 +1,5 @@
 export async function getProfile() {
-  const response = await fetch("http://localhost:3000/main/profile", {
+  const response = await fetch("/main/profile", {
     method: "GET",
   })
     .then((data) => {

@@ -17,7 +17,6 @@
 </head>
 
 <body>
-    <audio src="./assets/audio/keyboard.mp3" id="typing"></audio>
     <div class="wrapper">
         <canvas id="canvas" width="500" height="500"></canvas>
         <div class="instruction">
@@ -48,10 +47,9 @@
 
     <script>
         window.onload = () => {
-            while (typeof module.mainShow !== "function") {
-                console.log(typeof module.mainShow)
-            }
-            module.mainShow()
+            typeof module.mainShow === "function" ? module.mainShow() : setTimeout(() => {
+                module.mainShow()
+            }, 1000)
         }
     </script>
 </body>

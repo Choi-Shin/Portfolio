@@ -23,7 +23,6 @@ export async function getRanking() {
     method: "GET",
   })
     .then((data) => {
-      console.log("GET 요청 받음");
       return data.json();
     })
     .catch((err) => {
