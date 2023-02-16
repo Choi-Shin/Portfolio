@@ -27,7 +27,7 @@ var gameover = new Audio("/sound/gameover2.wav");
 
 let timeout;
 
-const fps = 10;
+const fps = 5;
 
 export function gameLoop(state) {
   while (!name) {
