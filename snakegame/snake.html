@@ -47,13 +47,9 @@
     </div>
 
     <script>
-        function sleep(ms) {
-            return new Promise((r) => setTimeout(r, ms));
-        }
         window.onload = () => {
             while (typeof module.mainShow !== "function") {
                 console.log(typeof module.mainShow)
-                sleep(100)
             }
             module.mainShow()
         }
