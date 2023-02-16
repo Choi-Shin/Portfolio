@@ -3,8 +3,6 @@ const fs = require("fs");
 const express = require("express");
 const path = require("path");
 const app = express();
-const hostname = "127.0.0.1";
-const port = 3000;
 const snakegame = require("./routes/snakegame");
 const crawler = require("./routes/crawler");
 
@@ -45,6 +43,4 @@ app.get("/videoChat", (req, res) => {
   res.sendFile(path.join(__dirname + "/videoChat/index.html"));
 });
 
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.listen(3000);

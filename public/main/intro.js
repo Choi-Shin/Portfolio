@@ -27,9 +27,6 @@ $againBtn.on("click", (e) => {
   typing();
 });
 const speed = 100;
-const audio = new Audio();
-audio.src = "./assets/audio/keyboard.mp3";
-audio.muted = true;
 
 let i = 0;
 export const typing = async () => {
@@ -38,8 +35,10 @@ export const typing = async () => {
   const accent = ["강", "력", "한"];
   // audio.play();
   while (letter.length) {
-    audio.muted = false;
-    audio.play();
+    // audio.play().catch(function () {
+    //   console.log("DOMException");
+    // });
+    // audio.muted = false;
     let l = letter.shift();
     if (l === "\n") {
       $announcement.innerHTML += "<br/>";
@@ -55,7 +54,6 @@ export const typing = async () => {
       }
     }
   }
-  audio.pause();
   await wait(400);
 
   if (i == announcement.length - 1) {

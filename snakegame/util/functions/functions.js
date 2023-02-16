@@ -40,6 +40,7 @@ export function getMousePos(canvas, evt) {
 
 export function isInside(pos, rect) {
   return (
+    rect &&
     pos.x > rect.x &&
     pos.x < rect.x + rect.width &&
     pos.y < rect.y + rect.height &&

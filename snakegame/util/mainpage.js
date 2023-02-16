@@ -17,9 +17,6 @@ let startButton;
 let rankingButton;
 let creditButton;
 let buttons = [startButton, rankingButton, creditButton];
-window.onload = () => {
-  mainShow();
-};
 
 canvas.addEventListener("mousemove", function (event) {
   let mousePos = getMousePos(canvas, event);

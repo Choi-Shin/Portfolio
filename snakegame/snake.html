@@ -6,10 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/snake.css">
+    <script type="text/javascript">
+        const module = {};
+    </script>
+    <script type="module">
+        import { mainShow } from "/util/mainpage.js"
+        module.mainShow = mainShow;
+    </script>
     <title>Document</title>
 </head>
 
 <body>
+    <audio src="./assets/audio/keyboard.mp3" id="typing"></audio>
     <div class="wrapper">
         <canvas id="canvas" width="500" height="500"></canvas>
         <div class="instruction">
@@ -37,7 +45,19 @@
             </ul>
         </div>
     </div>
-    <script type="module" src="/util/mainpage.js"></script>
+
+    <script>
+        function sleep(ms) {
+            return new Promise((r) => setTimeout(r, ms));
+        }
+        window.onload = () => {
+            while (typeof module.mainShow !== "function") {
+                console.log(typeof module.mainShow)
+                sleep(100)
+            }
+            module.mainShow()
+        }
+    </script>
 </body>
 
 </html>
