@@ -40,13 +40,17 @@ export function project() {
     gitHub.addEventListener("click", () =>
       window.open(`${projectArr[i].github}`)
     );
-    const site = document.createElement("button");
-    const homeImg = document.createElement("img");
-    homeImg.src = "/assets/img/projects/home.png";
-    site.appendChild(homeImg);
-    site.addEventListener("click", () => window.open(`${projectArr[i].link}`));
     footer.appendChild(gitHub);
-    footer.appendChild(site);
+    if (projectArr[i].link !== "") {
+      const site = document.createElement("button");
+      const homeImg = document.createElement("img");
+      homeImg.src = "/assets/img/projects/home.png";
+      site.appendChild(homeImg);
+      site.addEventListener("click", () =>
+        window.open(`${projectArr[i].link}`)
+      );
+      footer.appendChild(site);
+    }
     const tooltip = document.createElement("div");
     tooltip.className = "projectTooltip";
     const detail = document.createElement("div");
@@ -89,5 +93,8 @@ export function project() {
 }
 
 const carousel = document.querySelector(".owl-carousel");
-carousel.addEventListener("mouseover", (event) => {});
+const tooltip = document.querySelector(".projectTooltip");
+carousel.addEventListener("mouseover", (event) => {
+  console.log(event.target);
+});
 carousel.addEventListener("mouseleave", (event) => {});
