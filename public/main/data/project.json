@@ -69,6 +69,16 @@
       "impression": "",
       "github": "https://github.com/Choi-Shin/notion_python",
       "link": ""
+    },
+    {
+      "name": "Portfolio 페이지",
+      "img": "/assets/img/projects/portfolio.jpg",
+      "skills": ["express.js", "javascript", "Google Search Console"],
+      "description": "",
+      "adversity": "",
+      "impression": "",
+      "github": "https://github.com/Choi-Shin/portfolio.git",
+      "link": ""
     }
   ]
 }
