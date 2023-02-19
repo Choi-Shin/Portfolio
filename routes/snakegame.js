@@ -13,7 +13,6 @@ router.get("/rank", async (req, res) => {
   try {
     let rank = require("../snakegame/data/ranking.json");
     res.setHeader("Content-Type", "application/json");
-    console.log("GET Request");
     res.json(JSON.stringify(rank));
   } catch (err) {
     res.status(500).json({ message: err.message });

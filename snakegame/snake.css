@@ -27,3 +27,21 @@ ul {
 li {
   font-size: 1rem;
 }
+
+.linkBtn {
+  margin: 0 auto;
+  width: 10rem;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  background: rgba(209, 209, 209, 0.7);
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a > img {
+  width: 1.5rem;
+}

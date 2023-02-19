@@ -20,11 +20,6 @@ app.get("/snakegame", (req, res) => {
   res.setHeader("Content-Type", "text/html");
   res.sendFile(path.join(__dirname + "/snakegame/snake.html"));
 });
-app.get("/profile", (req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "application/json");
-  res.sendFile(path.join(__dirname + "/main/data/profile.json"));
-});
 // app.get("/nextBoard", (req, res) => {
 //   res.statusCode = 200;
 //   res.setHeader("Content-Type", "text.html");

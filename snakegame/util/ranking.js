@@ -32,6 +32,7 @@ async function draw() {
       })
       .catch((err) => console.log(err))
   );
+  console.log(data);
   createRect(0, 0, canvas.width, canvas.height, "black");
   writeText("3rem", "arial", "white", "Ranking", canvas.width / 3, 50);
   writeText("1.2rem", "arial", "#00FF42", "rank", 50, 100);
