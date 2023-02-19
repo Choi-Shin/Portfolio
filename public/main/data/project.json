@@ -32,13 +32,13 @@
     },
     {
       "name": "Next.js 게시판",
-      "img": "",
+      "img": "/assets/img/projects/nextboard.jpg",
       "skills": ["Next.js", "Typescript", "MongoDB", "AWS EC2", "React-quill"],
       "description": "AWS EC2를 이용하여 배포한 Next.js 게시판 입니다. MongoDB를 사용하였고 bcrypt를 이용하여 비밀번호의 보안을 강화하였습니다.",
       "adversity": "Next.js와 React-quill을 연동하는 것이 어려웠습니다. 타입스크립트 문법을 사용하여 타입이나 인터페이스 선언을 필수적으로 해주어야하는 점에서 코드가 길어졌습니다.",
       "impression": "typescript 사용으로 인해 코드가 길어지고 작성해야하는 것이 많아졌지만 어떠한 객체를 주고 받는지 정확히 알 수 있는 점에서 배울 점이 많았습니다.",
       "github": "https://github.com/Choi-Shin/NextBoard.git",
-      "link": "https://choi-devspace.kro.kr/nextBoard"
+      "link": "https://next-board-sandy.vercel.app"
     },
     {
       "name": "snake game",

@@ -7,8 +7,11 @@ const response = await fetch("./main/data/profile.json")
   });
 
 export function profile() {
+  const title = document.querySelector(".profileTitle");
+  title.innerHTML = "<h2>Profile</h2>";
   const head = document.querySelector(".profileHead");
   const imgCon = document.createElement("div");
+  imgCon.className = "imgCon";
   const img = document.createElement("img");
   img.className = "profileImg";
   img.src = response.img;
@@ -23,10 +26,17 @@ export function profile() {
   info.className = "info";
   for (let i in key) {
     const div = document.createElement("div");
-    div.innerHTML = key[i] + " : " + profile[key[i]];
+    div.innerHTML =
+      "&#60;" +
+      key[i] +
+      "&#62;" +
+      profile[key[i]] +
+      "&#60;/" +
+      key[i] +
+      "&#62;";
     info.appendChild(div);
   }
-  conWrapper.appendChild(info);
+  imgCon.appendChild(info);
   const introduce = document.createElement("div");
   introduce.className = "introduce";
   let intro = "";

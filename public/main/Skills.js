@@ -81,7 +81,7 @@ skills.addEventListener("refresh", () => {
   });
 });
 
-const skilllist = document.querySelector(".skillContainer");
+const skilllist = document.querySelector(".skillList");
 skilllist.addEventListener("mouseover", (event) => {
   const target = event.target;
   // console.log(target.tagName);
@@ -140,7 +140,7 @@ skilllist.addEventListener("mouseleave", (event) => {
 // });
 
 skills.addEventListener("font", () => {
-  const skillCon = document.querySelector(".skillContainer");
+  const skillCon = document.querySelector(".skillList");
   skillCon.classList.add("anim");
   setTimeout(() => {
     skillCon.classList.remove("anim");

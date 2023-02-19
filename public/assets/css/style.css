@@ -77,7 +77,7 @@ a {
   color: rgb(0, 0, 0);
 }
 
-section {
+#intro {
   display: grid;
   place-items: center;
   align-content: center;
@@ -166,108 +166,28 @@ li {
   list-style: none;
 }
 
-.pageContainer {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  align-content: space-between;
+.anim {
+  animation: skillcon 2s ease-in-out;
 }
 
+#skills {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  max-height: 100vh;
+}
 .skillContainer {
-  /* display: grid; */
   margin: 0;
-  /* border: 1px black solid; */
-  border-radius: 1.3rem;
   text-align: center;
   background-color: transparent;
   width: 70vw;
   max-width: 50rem;
-  height: 80vh;
-  margin-top: 1rem;
-  padding: 2rem;
   overflow: hidden;
-  /* align-content: space-around; */
   text-overflow: ellipsis;
 }
-
-@media screen and (max-width: 1100px) {
-  .profileImg {
-    width: 25rem;
-  }
-  #profile {
-    max-height: 92vh;
-    font-size: small;
-  }
-}
-@media screen and (max-width: 700px) {
-  .profileImg {
-    width: 15rem;
-  }
-  #profile {
-    font-size: smaller;
-  }
-  .profileHead {
-    height: 60vh;
-  }
-}
-
-#profile {
-  align-content: space-between;
-  font-weight: bold;
-}
-.profileHead {
-  align-items: center;
-  display: grid;
-  grid-template-columns: 30vw 1fr;
-  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
-  margin-top: 1rem;
-  border-radius: 1rem;
-  padding: 2rem;
-}
-.anim {
-  animation: skillcon 2s ease-in-out;
-}
-.introWrapper {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
-  height: 100%;
-}
-
-.introWrapper > div {
-  background: rgba(41, 41, 41, 0.628);
-  color: white;
-  border-radius: 1rem;
-  padding-bottom: 2rem;
-  padding: 2rem;
-}
-.profileWrapper {
-  display: grid;
-  margin-top: 2rem;
-  grid-template-rows: 1fr 30vh;
-  align-items: center;
-  align-items: start;
-}
-.info {
-  /* border-bottom: 1px dotted black; */
-  /* margin: 0 auto; */
-  text-align: left;
-}
-.introduce {
-  margin: 0 auto;
-}
-
-.timelineList {
-  width: 30rem;
-  margin: 0 auto;
-}
-.timelineList > li {
-  text-align: left;
-  margin: 1rem;
-}
-
 @keyframes skillcon {
   0% {
     transform: translateX(0);
@@ -287,10 +207,7 @@ li {
 .skillHeader {
   display: flex;
   margin: 0;
-  /* padding-left: 1rem; */
-  padding-right: 1rem;
   margin-bottom: 1rem;
-  justify-content: space-between;
 }
 .stackTitle {
   margin: 0;
@@ -299,13 +216,11 @@ li {
 }
 
 .skillTable {
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
   justify-items: end;
   display: grid;
-  min-height: 5.5rem;
+  /* min-height: 5.5rem; */
   align-items: center;
-  align-content: space-between;
-  justify-content: space-between;
   justify-items: center;
 }
 .skillList {
@@ -319,6 +234,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: start;
+  margin-bottom: 10vh;
 }
 .skillCon {
   display: flex;
@@ -329,9 +245,9 @@ li {
   vertical-align: middle;
   background-color: rgb(255, 255, 255);
   color: black;
-  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  /* padding: 0.1rem 0.5rem 0.1rem 0.5rem; */
   border-radius: 0.3rem;
-  margin-bottom: 0.1rem;
+  /* margin-bottom: 0.1rem; */
   width: 6.5rem;
   text-align: center;
   border: 1px solid black;
@@ -378,6 +294,11 @@ li {
 
 .tooltip-hover:hover {
   display: none;
+}
+.cursor {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💡</text></svg>")
+      16 0,
+    auto; /*!emojicursor.app*/
 }
 
 .skillName > img {
@@ -459,20 +380,63 @@ h2 {
   }
 }
 
-.left {
-  width: 50%;
-  float: left;
+#profile {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+.profileWrapper {
+  display: grid;
+  /* width: 70vw; */
+  margin: 0 auto;
+  align-content: center;
+  justify-items: center;
+  margin-bottom: 10vh;
+}
+.profileTitle {
+  margin-bottom: 1rem;
 }
 
-.right {
-  width: 50%;
-  float: right;
+.profileHead {
+  padding: 1rem;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+}
+.imgCon {
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  align-items: center;
+}
+.info > div:hover {
+  background: rgba(97, 143, 205, 0.3);
 }
 
-.cursor {
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💡</text></svg>")
-      16 0,
-    auto; /*!emojicursor.app*/
+.imgCon > img {
+  width: 25vw;
+}
+.introduce {
+  text-align: center;
+}
+
+.timelineList {
+  width: 30rem;
+  margin: 0 auto;
+}
+.timelineList > li {
+  text-align: left;
+  margin: 1rem;
+}
+
+#projects {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
 }
 
 #projects > h2 {
@@ -539,19 +503,8 @@ h2 {
   color: black !important;
 }
 
-#projects {
-  display: grid;
-  grid-template-rows: 4vh 1fr;
-  justify-content: center;
-  align-items: start;
-  align-items: start;
-}
-.carouselTitle {
-  margin-top: 2rem;
-}
-
 .owl-carousel {
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .projectTooltip {
@@ -574,4 +527,10 @@ h2 {
 
 .projectTooltip-hover:hover {
   display: none;
+}
+
+#contact {
+  display: grid;
+  justify-content: center;
+  align-content: center;
 }
