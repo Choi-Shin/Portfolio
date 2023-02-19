@@ -12,7 +12,7 @@
     },
     {
       "name": "Spring 게시판",
-      "img": "",
+      "img": "/assets/img/projects/spring.jpg",
       "skills": ["Spring", "mySQL", "AWS EC2", "tomcat"],
       "description": "스프링 프레임워크를 이용하여 제작한 댓글 게시판입니다. 회원, 쪽지, 글, 댓글에 대한 CRUD가 구현되어있습니다.",
       "adversity": "EC2를 이용하여 처음 배포해본 사이트인데 연동하는 것이 어려웠습니다. 비교적 기능이 다양하여 파일 갯수가 많아졌고 관리, 파일 수정에 있어서 어려움을 느꼈고 ERD가 있어서 차분하게 작업하여 기능을 구현할 수 있게 되었습니다.",
@@ -52,12 +52,12 @@
     },
     {
       "name": "instagram scraper",
-      "img": "",
+      "img": "/assets/img/projects/insta.jpg",
       "skills": ["Python", "selenium"],
       "description": "",
       "adversity": "",
       "impression": "",
-      "github": "",
+      "github": "https://github.com/Choi-Shin/InstaScraper.git",
       "link": ""
     },
     {
