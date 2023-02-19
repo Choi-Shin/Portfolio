@@ -11,7 +11,6 @@ app.use(express.static("public"));
 app.use(express.static("main"));
 app.use(express.static("snakegame"));
 app.use(express.static("nextBoard"));
-app.use(express.static("gramDown"));
 app.use(express.static("videoChat"));
 app.use("/snakegame", snakegame);
 app.use("/crawler", crawler);
@@ -19,18 +18,6 @@ app.get("/snakegame", (req, res) => {
   res.statusCode = 200;
   res.setHeader("Content-Type", "text/html");
   res.sendFile(path.join(__dirname + "/snakegame/snake.html"));
-});
-// app.get("/nextBoard", (req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader("Content-Type", "text.html");
-//   res.sendFile(
-//     path.join(__dirname + "/nextBoard/.next/server/pages/index.html")
-//   );
-// });
-app.get("/gramDown", (req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/html");
-  res.sendFile(path.join(__dirname + "/gramDown/index.html"));
 });
 app.get("/videoChat", (req, res) => {
   res.statusCode = 200;
