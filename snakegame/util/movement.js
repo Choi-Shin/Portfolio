@@ -71,6 +71,7 @@ async function loop() {
         rankingData.pop();
       }
       let data = { ranking: rankingData };
+      console.log(data);
       await postRanking(data);
     } else if (count == 0 && rankingData.length < 10) {
       rankingData.push({

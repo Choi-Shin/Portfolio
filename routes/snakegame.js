@@ -27,6 +27,7 @@ router.post("/rank", async (req, res) => {
       "utf8",
       (err) => err && console.log(err)
     );
+    console.log(data);
     res.status(200);
     return res.send({ response: "랭킹이 등록되었습니다." });
   } catch (err) {
