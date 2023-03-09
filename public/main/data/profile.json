@@ -10,13 +10,13 @@
       "birth": "1990.10.26 / 서울특별시",
       "tel": "<b>Tel.</b><a href='tel:010-5143-1026'> 010-5143-1026</a><br>",
       "email": "<b>Email.</b><a href='mailto:shincho1990@naver.com'> shincho1990@naver.com</a><br>",
-      "address": "서울특별시 은평구 구산동"
+      "address": "<b>서울특별시 은평구 구산동</b>"
     },
     "history": [
-      "<div>2022년 3월<br>중앙정보처리학원<br>JAVA 개발자 과정 수료</div>",
-      "<div>2022년 6월<br>42Seoul 라피신 과정 수료</div>",
-      "<div>2022년 8월<br>카카오 챗봇 <지금날씨> 출시</div>",
-      "<div>그 외 개인프로젝프는 프로젝트 탭에서 확인하실 수 있습니다.</div>"
+      "<div>2022년 3월<div class='histroyInfo'>• 중앙정보처리학원JAVA 개발자 과정 수료</div></div>",
+      "<div>2022년 6월<div class='histroyInfo'>• 42Seoul 라피신 과정 수료</div></div>",
+      "<div>2022년 8월<div class='histroyInfo'>• 카카오 챗봇 <지금날씨> 출시</div></div>",
+      "<div>그 외 개인프로젝프는 프로젝트 탭에서 확인하실 수 있습니다.</div></div>"
     ]
   }
 }
