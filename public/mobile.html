@@ -24,6 +24,10 @@
         img {
             width: 30%;
         }
+
+        .action {
+            font-size: 2rem;
+        }
     </style>
 </head>
 
@@ -35,7 +39,7 @@
         <div class="action"></div>
     </div>
     <script type="text/javascript">
-        const list = ["자바스크립트 쳐다보는 중", "구글링 중", "간식 먹는 중", "터치스크린 만져보는 중", "chatGPT에게 과외받는 중"]
+        const list = ["👀 자바스크립트 쳐다보는 중", "💻 구글링 중", "🍔 간식 먹는 중", "📱 터치스크린 만져보는 중", "🧘 chatGPT에게 과외받는 중"]
         const action = document.querySelector(".action")
         document.addEventListener("DOMContentLoaded", () => {
             startInterval(5, loading)
