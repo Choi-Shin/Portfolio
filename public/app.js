@@ -8,8 +8,8 @@ setHeight();
 
 let observer = new Observer("hidden", "show");
 observer.observe();
-skillAdd();
 profile();
+skillAdd();
 $(function () {
   project();
 });
@@ -20,7 +20,7 @@ let flag = true;
 let $html = $("html");
 
 $html.animate({ scrollTop: 0 }, 10);
-let pageName = ["intro", "skills", "profile", "projects", "contact"];
+let pageName = ["intro", "profile", "skills", "projects", "contact"];
 $(window).on("wheel", (e) => {
   if ($html.is(":animated")) {
     return;
@@ -94,7 +94,7 @@ window.addEventListener("locationchange", (e) => {
   }
   const skill = document.querySelector("#skills");
   const profile = document.querySelector("#profile");
-  if (page == 1) {
+  if (page == 2) {
     skill.dispatchEvent(new Event("ani", { bubbles: true }));
     skill.dispatchEvent(new Event("font", { bubbles: true }));
   } else if (page == 2) {

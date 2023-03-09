@@ -275,6 +275,7 @@ li {
   font-size: 1.3em;
   color: white;
   background: rgb(55, 55, 55);
+  text-align: left;
 }
 .unix {
   display: none;
@@ -382,55 +383,94 @@ h2 {
 
 #profile {
   display: grid;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
-  align-content: center;
   min-height: 100vh;
   max-height: 100vh;
-}
-.profileWrapper {
-  display: grid;
-  /* width: 70vw; */
-  margin: 0 auto;
-  align-content: center;
+  width: 80%;
+  grid-template-columns: 1fr 1fr;
   justify-items: center;
-  margin-bottom: 10vh;
+  margin: 0 auto;
 }
-.profileTitle {
-  margin-bottom: 1rem;
-}
-
-.profileHead {
-  padding: 1rem;
-  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
-  border-radius: 0.5rem;
-}
-.imgCon {
+.profileMain {
   display: grid;
-  grid-template-columns: 20vw 1fr;
+  grid-template-rows: 18vw 1fr;
+  align-items: start;
+  margin: 3rem;
+}
+.profileHead {
+  /* margin: 3rem; */
+  display: grid;
+  grid-template-columns: 15vw 1fr;
+  align-items: center;
+  justify-items: center;
+  justify-items: start;
   align-items: center;
 }
-.info > div:hover {
-  background: rgba(97, 143, 205, 0.3);
+.profileImg {
+  border: 1px solid gray;
+  width: 15vw;
+  height: 15vw;
+  display: grid;
+  justify-content: space-around;
+  border-radius: 50%;
+  align-content: center;
+  overflow: hidden;
+}
+.profileImg img {
+  width: 10vw;
+  height: 15vw;
+}
+.adjective {
+  font-size: 2vw;
+}
+.profileIntro > .highlight {
+  color: rgb(73, 87, 76) !important;
+  font-size: 3vw;
+  font-weight: bold;
+}
+.profileIntro > p {
+  margin: 0;
 }
 
-.imgCon > img {
-  width: 25vw;
+.profileIntro {
+  margin-left: 1rem;
 }
-.introduce {
-  text-align: center;
+.profileText {
+  /* margin: 3rem; */
+  padding-top: 2rem;
+  font-size: calc(0.5vw + 1.2vh);
+  border-top: 1px solid lightgray;
 }
-
-.timelineList {
-  width: 30rem;
+.profileRight {
+  display: grid;
+  grid-template-rows: 18vw 1fr;
+  width: 100%;
   margin: 0 auto;
+  margin-top: 3rem;
+  margin-bottom: 7rem;
+  border-left: 1px solid lightgray;
+  align-items: start;
 }
-.timelineList > li {
-  text-align: left;
-  margin: 1rem;
+.profileInfo {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  margin-left: 3rem;
 }
-
+.profileHistory {
+  border-top: 1px solid lightgray;
+  font-size: 0.5vw + 1vh;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  margin-left: 3rem;
+}
+.profileHistory > div {
+  margin: 0;
+  padding: 0;
+}
 #projects {
   display: grid;
   justify-content: center;
