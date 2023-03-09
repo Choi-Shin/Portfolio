@@ -23,6 +23,18 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/owl.carousel.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="./assets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        var filter = "win16|win32|win64|mac|macintel";
+
+        if (navigator.platform) {
+            if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+                location.replace(`mobile.html`)
+            } else {
+                //pc
+                console.log('pc 접속');
+            }
+        }
+    </script>
     <script defer type="module" src="app.js"></script>
 </head>
 
