@@ -38,20 +38,25 @@
         const list = ["자바스크립트 쳐다보는 중.", "구글링 중", "간식 먹는 중", "터치스크린 만져보는 중", "chatGPT에게 과외받는 중"]
         const action = document.querySelector(".action")
         document.addEventListener("DOMContentLoaded", () => {
-            setInterval(function () {
-                for (i in list) {
-                    for (var j = 1; j <= 3; j++) {
-                        (function (i, j) {
-                            setTimeout(function () {
-                                console.log(list[i], i)
-                                action.innerHTML = list[i] + (".".repeat(j))
-                            }, 1000 * i + (j * 300))
-                        })(i, j)
-                    }
-                }
-            }, 5000)
+            startInterval(3, loading)
         })
 
+        function loading() {
+            for (i in list) {
+                for (var j = 1; j <= 3; j++) {
+                    (function (i, j) {
+                        setTimeout(function () {
+                            console.log(list[i], i)
+                            action.innerHTML = list[i] + (".".repeat(j))
+                        }, 1000 * i + (j * 300))
+                    })(i, j)
+                }
+            }
+        }
+        function startInterval(seconds, callback) {
+            callback();
+            return setInterval(callback, seconds * 1000);
+        }
     </script>
 </body>
 
