@@ -2,9 +2,7 @@ const response = await fetch("./main/data/project.json")
   .then((r) => {
     return r.json();
   })
-  .catch((err) => {
-    console.log(err);
-  });
+  .catch((err) => {});
 
 export function project() {
   const carousel = document.querySelector(".owl-carousel");
@@ -58,6 +56,7 @@ export function project() {
     //imageContainer.appendChild(tooltip);
     tooltip.appendChild(skill);
     tooltip.appendChild(detail);
+    wrapper.appendChild(tooltip);
     wrapper.appendChild(name);
     wrapper.appendChild(imageContainer);
     wrapper.appendChild(footer);
@@ -91,10 +90,3 @@ export function project() {
   });
   $(".owl-carousel").trigger("refresh.owl.carousel");
 }
-
-const carousel = document.querySelector(".owl-carousel");
-const tooltip = document.querySelector(".projectTooltip");
-carousel.addEventListener("mouseover", (event) => {
-  console.log(event.target);
-});
-carousel.addEventListener("mouseleave", (event) => {});
