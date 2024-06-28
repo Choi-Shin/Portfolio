@@ -14,6 +14,9 @@ app.use(express.static("nextBoard"));
 app.use(express.static("videoChat"));
 app.use("/snakegame", snakegame);
 app.use("/crawler", crawler);
+app.get("/", (req, res) => {
+  res.send(path.join(__dirname + "index.html"))
+})
 app.get("/snakegame", (req, res) => {
   res.statusCode = 200;
   res.setHeader("Content-Type", "text/html");
