@@ -7,12 +7,11 @@ const snakegame = require("./routes/snakegame");
 const crawler = require("./routes/crawler");
 
 app.use(express.json());
-app.use(express.static("public"));
+app.use('/',express.static("public"));
 app.use(express.static("main"));
 app.use(express.static("snakegame"));
 app.use(express.static("nextBoard"));
 app.use(express.static("videoChat"));
-app.use("/")
 app.use("/snakegame", snakegame);
 app.use("/crawler", crawler);
 app.get("/snakegame", (req, res) => {
