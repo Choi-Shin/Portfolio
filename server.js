@@ -15,7 +15,7 @@ app.use(express.static("videoChat"));
 app.use("/snakegame", snakegame);
 app.use("/crawler", crawler);
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/index.html"))
+  res.sendFile(path.join(__dirname + "/public/index.html"))
 })
 app.get("/snakegame", (req, res) => {
   res.statusCode = 200;
