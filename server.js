@@ -25,4 +25,4 @@ app.get("/videoChat", (req, res) => {
   res.sendFile(path.join(__dirname + "/videoChat/index.html"));
 });
 
-app.listen(3001);
+app.listen(3000);
