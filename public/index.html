@@ -1,121 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="description"
-        content="신초이 Cho-I Shin | Spring, Python, JavaScript, TypeScript, Next.js, HTMLCanvas, AWS 등 다양한 개발 언어와 도구, 프레임워크와 환경을 사랑하는 프론트엔드 웹 개발자의 포토폴리오 사이트 입니다. 현재 진행 중인 프로젝트와 ver.1 개발을 종료한 프로젝트를 보실 수 있습니다." />
-    <meta name="keywords"
-        content="Java, Spring, Python, Chatbot, Canvas, JavaScript, Next.js, TypeScript, Front-End, Back-End, Fullstack, Developer, Portfolio, AWS, 웹개발자, 코딩, 프로그래밍, 개발자포트폴리오, 프로그래머, 웹개발자포트폴리오, 포트폴리오" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="신초이 Cho-I Shin | Spring, Python, JavaScript, TypeScript, Next.js, HTMLCanvas, AWS 등 다양한 개발 언어와 도구, 프레임워크와 환경을 사랑하는 프론트엔드 웹 개발자의 포토폴리오 사이트 입니다. 현재 진행 중인 프로젝트와 ver.1 개발을 종료한 프로젝트를 보실 수 있습니다."
+    />
+    <meta
+      name="keywords"
+      content="Java, Spring, Python, Chatbot, Canvas, JavaScript, Next.js, TypeScript, Front-End, Back-End, Fullstack, Developer, Portfolio, AWS, 웹개발자, 코딩, 프로그래밍, 개발자포트폴리오, 프로그래머, 웹개발자포트폴리오, 포트폴리오"
+    />
     <meta name="author" content="Choi Shin" />
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://choi-devspace.kro.kr/">
-    <meta property="og:title" content="신초이 | Front-end Developer">
-    <meta property="og:description"
-        content="프론트엔드 개발자 신초이의 포트폴리오에 오신 것을 환영 합니다. 호기심과 그에 걸맞은 실천력, 문제를 해결하고자 하는 근성, 사용자가 보기 좋은 화면을 출력하고 결합도가 낮은 코드를 짜기 위해 모듈화에 대해 고민하는 개발자입니다. 게임과 레고를 좋아합니다." />
-    <meta property="og:image" content="https://choi-devspace.kro.kr/assets/img/og-image.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://choi-devspace.kro.kr/" />
+    <meta property="og:title" content="신초이 | Front-end Developer" />
+    <meta
+      property="og:description"
+      content="프론트엔드 개발자 신초이의 포트폴리오에 오신 것을 환영 합니다. 호기심과 그에 걸맞은 실천력, 문제를 해결하고자 하는 근성, 사용자가 보기 좋은 화면을 출력하고 결합도가 낮은 코드를 짜기 위해 모듈화에 대해 고민하는 개발자입니다. 게임과 레고를 좋아합니다."
+    />
+    <meta
+      property="og:image"
+      content="https://choi-devspace.kro.kr/assets/img/og-image.jpg"
+    />
     <meta property="og:site_name" content="신초이의 포트폴리오" />
-    <meta http-equiv="X-UA-Compatible" congitent="IE=edge">
-    
+    <meta http-equiv="X-UA-Compatible" congitent="IE=edge" />
 
     <title>신초이 | Cho-I Shin | 프론트엔드 개발자 Front-end Developer</title>
-    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/owl.carousel.min.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./assets/css/owl.carousel.min.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/js/owl.carousel.min.js"></script>
+    <script
+      type="text/javascript"
+      src="./assets/js/owl.carousel.min.js"
+    ></script>
     <script type="text/javascript">
-        var filter = "win16|win32|win64|mac|macintel";
+      var filter = "win16|win32|win64|mac|macintel";
 
-        if (navigator.platform) {
-            if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
-                location.replace(`mobile.html`)
-            } else {
-                //pc
-                console.log('pc 접속');
-            }
+      if (navigator.platform) {
+        if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+          location.replace(`mobile.html`);
+        } else {
+          //pc
+          console.log("pc 접속");
         }
+      }
     </script>
     <script defer type="module" src="app.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <div class="nav">
-            <ul class="navList">
-                <li class="navLi intro selected">
-                    <a href="#intro">intro</a>
-                </li>
-                <li class="navLi profile">
-                    <a href="#profile">profile</a>
-                </li>
-                <li class="navLi skills">
-                    <a href="#skills">skills</a>
-                </li>
+      <div class="nav">
+        <ul class="navList">
+          <li class="navLi intro selected">
+            <a href="#intro">intro</a>
+          </li>
+          <li class="navLi profile">
+            <a href="#profile">profile</a>
+          </li>
+          <li class="navLi skills">
+            <a href="#skills">skills</a>
+          </li>
 
-                <li class="navLi projects">
-                    <a href="#projects">projects</a>
-                </li>
-                <li class="navLi contact">
-                    <a href="#contact">contact</a>
-                </li>
-            </ul>
+          <li class="navLi projects">
+            <a href="#projects">projects</a>
+          </li>
+          <li class="navLi contact">
+            <a href="#contact">contact</a>
+          </li>
+        </ul>
+      </div>
+      <section class="hidden" id="intro">
+        <canvas id="canvas"></canvas>
+        <h1 class="announcement"></h1>
+        <button class="watchAgain">다시 보기</button>
+      </section>
+      <section class="hidden" id="profile">
+        <div class="profileMain">
+          <div class="profileHead">
+            <div class="profileImg"></div>
+            <div class="profileIntro"></div>
+          </div>
+          <div class="profileText"></div>
         </div>
-        <section class="hidden" id="intro">
-            <canvas id="canvas"></canvas>
-            <h1 class="announcement"></h1>
-            <button class="watchAgain">다시 보기</button>
-        </section>
-        <section class="hidden" id="profile">
-            <div class="profileMain">
-                <div class="profileHead">
-                    <div class="profileImg"></div>
-                    <div class="profileIntro"></div>
-                </div>
-                <div class="profileText"></div>
-            </div>
-            <div class="profileRight">
-                <div class="profileInfo">
-                    <div class="infoHead"></div>
-                    <div class="infoContent"></div>
-                </div>
-                <div class="profileHistory"></div>
-            </div>
-        </section>
-        <section class="hidden" id="skills">
-            <div class="skillHeader">
-                <h2>Skills</h2>
-            </div>
-            <div class="skillList">
-            </div>
-        </section>
-        <section class="hidden" id="projects">
-            <div class="carouselTitle">
-                <h2>Projects</h2>
-            </div>
-            <div class="owl-carousel owl-theme">
-            </div>
-        </section>
-        <section class="hidden" id="contact">
-            <div class="contactTitle">
-                <h2>Contact</h2>
-            </div>
-            <div class="contacts">
-                <div>
-                    <a href="tel:01051431026">
-                        <h4>전화하기</h3>
-                    </a>
-                </div>
-                <div><a href="mailto:shincho1990@naver.com">
-                        <h4>메일 보내기</h3>
-                    </a></div>
-            </div>
-        </section>
+        <div class="profileRight">
+          <div class="profileInfo">
+            <div class="infoHead"></div>
+            <div class="infoContent"></div>
+          </div>
+          <div class="profileHistory"></div>
+        </div>
+      </section>
+      <section class="hidden" id="skills">
+        <div class="skillHeader">
+          <h2>Skills</h2>
+        </div>
+        <div class="skillList"></div>
+      </section>
+      <section class="hidden" id="projects">
+        <div class="carouselTitle">
+          <h2>Projects</h2>
+        </div>
+        <div class="owl-carousel owl-theme"></div>
+      </section>
+      <section class="hidden" id="contact">
+        <div class="contactTitle">
+          <h2>Contact</h2>
+        </div>
+        <div class="contacts">
+          <div>
+            <a href="tel:01051431026">
+              <h4>전화하기</h4>
+            </a>
+          </div>
+          <div>
+            <a href="mailto:shincho1990@naver.com">
+              <h4>메일 보내기</h4>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
-</body>
-<!--             autoplay: true,
+  </body>
+  <!--             autoplay: true,
             autoplayTimeout: 2000,
             autoplayHoverPause: true,-->
-
 </html>
