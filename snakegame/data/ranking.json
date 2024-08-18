@@ -1,1 +1,14 @@
-{"ranking":[{"score":19,"name":"adfaf","date":"2023-2-17 02:23:13"},{"score":19,"name":"abcd","date":"2023-2-19 14:37:45"},{"score":16,"name":"b bnn","date":"2023-2-17 02:28:36"},{"score":14,"name":"abcd","date":"2023-2-19 14:34:57"},{"score":11,"name":"aaaaa","date":"2023-2-17 02:19:17"},{"score":9,"name":"asdfasdf","date":"2023-2-17 01:16:18"},{"score":9,"name":"asdf","date":"2023-2-19 20:34:51"},{"score":8,"name":"asdfasdf","date":"2023-2-17 01:16:18"},{"score":3,"name":"asdfasdf","date":"2023-2-17 01:16:18"},{"score":3,"name":"test11","date":"2023-2-19 14:39:20"}]}
+{
+  "ranking": [
+    { "score": 19, "name": "adfaf", "date": "2023-2-17 02:23:13" },
+    { "score": 19, "name": "abcd", "date": "2023-2-19 14:37:45" },
+    { "score": 16, "name": "b bnn", "date": "2023-2-17 02:28:36" },
+    { "score": 14, "name": "abcd", "date": "2023-2-19 14:34:57" },
+    { "score": 11, "name": "aaaaa", "date": "2023-2-17 02:19:17" },
+    { "score": 9, "name": "asdfasdf", "date": "2023-2-17 01:16:18" },
+    { "score": 9, "name": "asdf", "date": "2023-2-19 20:34:51" },
+    { "score": 8, "name": "asdfasdf", "date": "2023-2-17 01:16:18" },
+    { "score": 3, "name": "asdfasdf", "date": "2023-2-17 01:16:18" },
+    { "score": 3, "name": "test11", "date": "2023-2-19 14:39:20" }
+  ]
+}
